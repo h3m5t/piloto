@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'second_page.dart'; // Importando a segunda página
 
 void main() {
   runApp(const HelpGoodApp());
@@ -60,7 +61,11 @@ class LoginPage extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  // lógica de login
+                  // Navegação para a segunda página
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const SecondPage()),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
